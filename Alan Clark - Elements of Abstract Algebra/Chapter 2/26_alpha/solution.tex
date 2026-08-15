@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{graphicx, amsmath, titling} % Required for inserting images
+
+
+\title{Alan Clark - Elements of Abstract Algebra\\Chapter 2, Exercise 26\alpha}
+
+\author{Afonso Vilhena Francisco}
+\date{15 August 2026}
+
+\begin{document}
+
+\maketitle
+
+ $\mathbf{26 \alpha.}$\textbf{ A semigroup is a set} $\mathbf{S}$ \textbf{with a product which associates to each ordered pair} $\mathbf{(a,b)}$ \textbf{of elements of} $\mathbf{S}$ \textbf{an element} $\mathbf{ab \in S}$ \textbf{in such a way that} $\mathbf{(ab)c=a(bc)}$ \textbf{for any elements} $\mathbf{a,b,c \in S}$.
+
+\textbf{Show that the set of all mappings from a given set} $\mathbf{X}$ \textbf{to itself forms a semigroup in which the product is composition of mappings.}
+
+\textbf{Show that the set of all one-to-one correspondences of } $\mathbf{X}$ \textbf{with itself forms a group under composition.}
+
+\vspace{0.5cm}
+
+Let $X^X:= \{ f:X \rightarrow X \}$. We aim to show that $(X^X, \circ)$ is a semigroup.
+
+Let $f,g \in X^X$. Then $(f \circ g): X\rightarrow X$, that is, $(f \circ g) \in X^X$, So $X^X$ is closed under composition.
+
+Let $f,g,h \in X^X$ and let $x \in X$. We have
+
+\begin{align*}
+    (f\circ ( g\circ h))(x) & = (f \circ(g \circ h )(x))\\
+                            & = (f \circ (g(h(x)))\\
+                            & = f(g(h(x)) \\
+                            & = (f \circ g) \circ h(x) \\
+                            & = ((f \circ g) \circ h )(x)
+\end{align*}
+
+Thus, the composition is associative and, therefore $(X^X, \circ)$ is a semigroup.
+
+\vspace{0.5cm}
+
+Let $\overline{X}^X:=\{ f:X \rightarrow X \mid f \text{ is bijective} \}$. We have to show that $(\overline{X}^X, \circ)$ is a group.
+
+Let $f,g \in \overline{X}^X$. Then $(f \circ g) : X \rightarrow X$. Moreover $(f \circ g)$ is bijective. So $\overline{X}^X$ is closed under composition.
+
+\begin{itemize}
+    \item (associativity) The same proof used for $X^X$ works for $\overline{X}^X$.\\
+    \item (identity) Consider the identity function, $i:X \rightarrow X$. Clearly, $i $ is bijective, so $i \in \overline{X}^X$. Let $f \in \overline{X}^X$. By definition, 
+    $$f\circ i=f=i \circ f$$\\
+    \item(inverse) Let $f \in \overline{X}^X$. Then $f $ is bijective.
+    
+    Now construct $g: X \rightarrow X$ such that $g(y)=x$ iff $f(x)=y$. For $g$ to be a function it must be the case that 
+    \begin{align*}
+        \forall y \in X \exists !x \in &X \;\;g(y)=x\\
+        &\Leftrightarrow\\
+        \forall y \in X \exists !x \in &X \;\;f(x)=y
+    \end{align*}
+
+but the last condition is true because $f$ is bijective.
+
+Let's verify that $g \in \overline{X}^X$, that is, that $g$ is bijective. 
+
+Suppose that $g(y_1)=g(y_2)$ for some $y_1,y_2$. Let's denote $x_1:=g(y_1)$ and $x_2:=g(y_2)$. Thus, by definition of $g$, we have that $f(x_1)=y_1$ and $f(x_2)=y_2$. Since $x_1=x_2$, of course, $y_1=y_2$, that is, $g$ is injective.
+
+Let $x \in X$, then there exists a $y \in X$ such that $f(x)=y$, that is, $g(y)=x$. Thus, $g$ is onto.
+
+Therefore, $g $ is bijective, that is, $g \in \overline{X}^X$.
+
+Let's verify that $g$, defined that way, is indeed the inverse of $f$,
+
+\begin{align*}
+   \forall x \in X, \hspace{0.5cm} (g \circ f)(x)=g(f(x))=x
+\end{align*}
+and
+\begin{align*}
+    \forall y \in X, \hspace{0.5cm}(f \circ g)(y)=f(g(y))=y.
+\end{align*}
+
+Thus, $g=f^{-1}$, as desired.
+\end{itemize}
+
+Therefore, $(\overline{X}^X, \circ)$ is a group.
+\end{document}
