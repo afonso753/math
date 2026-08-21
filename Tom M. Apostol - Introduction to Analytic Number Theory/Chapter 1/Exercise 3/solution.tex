@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{graphicx, amsfonts, amsmath} % Required for inserting images
+
+\title{Apostol Chapter 1 - Exercise 1}
+\author{Afonso Vilhena Francisco}
+\date{21 August 2026}
+
+\begin{document}
+
+\maketitle
+
+\textbf{If} $\mathbf{(a,b)=1,}$ \textbf{then} $\mathbf{(a^n,b^k)}$ \textbf{for all} $\mathbf{n \geq1, k\geq 1.}$
+
+\vspace{0.5cm}
+
+Suppose that $(a,b)=1$.
+
+By the Fundamental Theorem of Arithmetic, we can write
+\begin{align*}
+    a= \prod_{i=1}^\infty p_i^{\alpha_i} \hspace{0.5cm} \text{e} \hspace{0.5cm} b= \prod_{i=1}^\infty p_i^{\beta_i}
+\end{align*}
+
+Then, we know that, 
+\begin{align*}
+    1=(a,b)=\prod_{i=1}^\infty p_i^{c_i},
+\end{align*}
+
+where $c_i=\min (\alpha_i, \beta_i)$. Since the left side is $1$, and the right side is a product of primes, we necessairlly have that each term in the product must be equal to $1$. That is, $c_i=0$, for every $i \geq 1$. But $c_i=0$ means that at least one $\alpha_i=0$ or $\beta_i=0.$ Thus, for each $i \geq 1$, $\alpha_i=0$ or $\beta_i=0.$
+
+\vspace{0.25cm}
+
+Let $n\geq1$ and $k \geq 1$. We can also write,
+\begin{align*}
+    a^n = \prod_{i=1}^\infty p_i^{n\alpha_i} \hspace{0.5cm} \text{e} \hspace{0.5cm} b^k = \prod_{i=1}^\infty p_i^{k\beta_i}
+\end{align*}
+
+Then,
+\begin{align*}
+    (a^n,b^k)=\prod_{i=1}^\infty p_i^{d_i},
+\end{align*}
+where $d_i=\min(n\alpha_i,n\beta_i)$. But we know that for each $i \geq 1$, either $\alpha_i=0$ or $\beta_i=0$. Thus, for each $i \geq 1$, either $n\alpha_i=0$ or $k\beta_i=0$. That is, for every $i \geq 1$, $d_i=0$. Therefore, $(a^n,b^k)=1.$
+\end{document}

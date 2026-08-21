@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\title{Apostol Chapter 1 - Exercise 2}
+\author{Afonso Vilhena Francisco}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\textbf{If } $\mathbf{(a,b)=(a,c)=1,}$ \textbf{then } $\mathbf{(a,bc)=1}$
+
+\vspace{0.5cm}
+
+Obviously, $1|a$ and $1|bc$.
+
+Let $e \in \mathbb{Z}$ such that $e|a$ and $e|bc$.
+
+Since $(a,b)=1$, we can write 
+$$1=ax+by \;\text{for some integers }x,y,$$
+multiplying both sides by $c$ we get
+$$c=acx+bcy.$$
+
+From $e|a$ and $e|bc$ we have that there exists $q_1,q_2 \in \mathbb{Z}$ such that
+$$a=eq_1 \text{ and } bc=eq_2.$$
+
+Substituing in the previous equation we get
+
+$$c=eq_1cx+eq_2y=e(q_1cx+q_2y),$$
+
+which means that $e|c$. Since $e|a$ and $e|c$ we get that $e|(a,c)$, but $(a,c)=1$, so $e|1$. Therefore $e=\pm1$. In particular, $e|1$. Therefore $(a,bc)=1$
+
+\vspace{1cm}
+
+
+\end{document}
