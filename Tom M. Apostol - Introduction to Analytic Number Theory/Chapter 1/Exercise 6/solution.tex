@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{graphicx, amsmath} % Required for inserting images
+
+\title{Apostol Chapter 1 - Exercise 6}
+\author{Afonso Vilhena Francisco }
+\date{22 August 2026}
+
+\begin{document}
+
+\maketitle
+
+\textbf{If} $\mathbf{(a,b)=1}$ \textbf{and if} $\mathbf{d|(a+b)},$ \textbf{then} $\mathbf{(a,d)=(b,d)=1.}$
+
+\vspace{0.5cm}
+
+Suppose that $(a,b)=1$ and that $d|(a+b)$. Then, $a+b=dq$, for some integer $q$.
+
+Obviously, $1$ divides $a,b$ and $d$.
+
+Let $e$ be a common divisor of $a$ and $d$. That is, $a=eq_1$ and $d=eq_2$, for some integers $q_1,q_2$. The  follow holds,
+
+\begin{align*}
+    dq = a+b &\Leftrightarrow eq_2q = eq_1+b\\
+             &\Leftrightarrow b=e(q_2q-q_1),
+\end{align*}
+
+that is, $e|b$. Since $e|a$ and $e|b$, by definition, $e|(a,b)$, but $(a,b)=1$. Thus, $e|1$. Therefore, $(a,d)=1.$
+
+A similar argument holds for $b$ and $d$. Indeed, let $f$ be a common divisor of $b$ and $d$. Then, $b=fq_3$ and $d=fq_4$, for some integers $q_3$ and $q_4$. We have the following,
+
+\begin{align*}
+    dq = a+b &\Leftrightarrow fq_4q = a+fq_3\\
+             &\Leftrightarrow a = f(q_4q-q_3),
+\end{align*}
+
+that is, $f|a$. Since $f|a$ and $f|b$, by definition, $f|(a,b)$, but $(a,b)=1$. Thus, $f|1$. Therefore, $(b,d)=1$.
+
+
+
+\end{document}
