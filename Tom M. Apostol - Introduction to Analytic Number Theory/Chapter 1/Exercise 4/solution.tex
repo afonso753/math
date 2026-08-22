@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{graphicx, amsmath} % Required for inserting images
+
+\title{Apostol Chapter 1 - Exercise 4}
+\author{Afonso Vilhena Francisco}
+\date{21 August 2026}
+
+\begin{document}
+
+\maketitle
+
+\textbf{ $4.$ If $\mathbf{(a,b)=1}$, then $\mathbf{(a+b,a-b)}$ is either $\mathbf{1}$ or $\mathbf{2}$.}
+
+\vspace{0.5cm}
+Suppose $(a,b)=1$,.
+
+Let $d:= (a+b,a-b)$. Then, by definition, $d|(a+b)$ and $d|(a-b)$. Thus, $d$ divides any linear combination of $a+b$ and $a-b$. In particular, it divides their sum and subtraction. Since $(a+b)+(a-b)=2a$ and $(a+b)-(a-b)=2b$ we have that $d|(2a)$ adn $d|(2b)$. That is, $2a=dq_1$ and $2b=dq_2$, for some integers $q_1$ and $q_2$.
+
+\vspace{0.25cm}
+
+Since $(a,b)=1$ we can write, $1=ax+by$, for some integers $x,y$. Multipying it by $2$ we have
+
+\begin{align*}
+    2 & = 2ax+2by\\
+      & = dq_1x+dq_2y\\
+      & = d(q_1x+q_2y)
+\end{align*}
+
+Since, $q_1x+q_2y \in \mathbb{Z}$, we can conclude that $d|2$. That is, if $d=(a+b,a-b)$ then $d$ has to divide $2$. Therefore, $(a+b,a-b) \in \{ 1,2 \}$.
+
+\end{document}
