@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Apostol, Chapter 1 - Exercise 17}
+\author{Afonso }
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+$\mathbf{17.}$ \textbf{Prove that if} $\mathbf{2^n+1}$ \textbf{is prime, then} $\mathbf{n}$ \textbf{is a power of 2.}
+
+Suppose that $n$ is not a power of $2$, that is, $n=2^km$, where $m>1$ is odd and $k \geq 0$.
+
+For any odd $j \geq 1$ we have the factorization,
+$$x^j+1=(x+1)(x^{j-1}-x^{j-2}+x^{j-3}-...-x+1).$$
+
+Taking $x=2^{2^k}$ and $j=m$, we get
+$$2^n+1=2^{2^km}+1=(2^{2^k}+1)(2^{2^k(m-1)}-2^{2^k(m-2)}+2^{2^k(m-3)}-...-2^{2^k}+1).$$
+
+Obviously, $2^{2^k}+1>1$, since $k \geq 0$.
+
+The second factor is also bigger than $1$. To see this we can agrupate the terms in the following way:
+$$(2^{2^k(m-1)}-2^{2^k(m-2)})+(2^{2^k(m-3)}-2^{2^k(m-4)})+...+(2^{2^k\times2}-2^{2^k})+1$$
+every bracketed () expression is bigger than $0$, thus the expression above is bigger than $1$.
+
+Thus, $2^n+1$ is composite (contradiciton).
+
+Therefore, $n$ is a power of $2$.
+
+\end{document}

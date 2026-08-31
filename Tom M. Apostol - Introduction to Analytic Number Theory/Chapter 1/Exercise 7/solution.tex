@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{graphicx, amsmath} % Required for inserting images
+
+\title{Apostol Chapter 1 - Exercise 7}
+\author{Afonso Vilhena Francisco}
+\date{22 August 2026}
+
+\begin{document}
+
+\maketitle
+
+\textbf{A rational number} $\mathbf{a/b}$ \textbf{with} $\mathbf{(a,b)=1}$ \textbf{is called a} \textbf{\textit{reduced fraction}. if the sum of two reduced fractions is an integer, say} $\mathbf{(a/b)+(c/d)=n},$ \textbf{prove that} $\mathbf{|b|=|d|}$.  
+
+\vspace{0.5cm}
+
+Suppose that $\frac{a}{b}+\frac{c}{d}=n$, with $(a,b)=1=(c,d)$.
+
+Multiplying the previous equation by $bd$, we get
+
+\begin{align}
+    ad+cb=bdn
+\end{align}
+
+This way we can write both
+
+\begin{align}
+    ad=bdn-cb\\
+    cb=bdn-ad
+\end{align}
+
+Since $(a,b)=1$, we can write $1=ax+by$, for some integers $x,y$. Multiplying it by $d$ and using $(2)$, we get,
+
+\begin{align*}
+    d &= adx+bdy\\
+      &= (bdn-cb)x+bdy\\
+      &= (dnx-cx+dy)b,\\
+\end{align*}
+that is, $b|d$.
+
+A similar argument shows that $d|b$. Indeed, since $(c,d)=1$, we can write $1=cz+dw$, for some integers $z,w$. Again, multiplying it by $b$ and using $(3)$, it follows that,
+
+\begin{align*}
+    b &= cbz+dbw\\
+      &= (bdn-ad)z+dbw\\
+      &= (bnz-az+bw)d,
+\end{align*}
+that is, $d|b$.
+
+Finally, since $b|d$ and $d|b$, by item \textit{(j)} of \textit{Theorem 1.1}, follows that $|b|=|d|$
+\end{document}

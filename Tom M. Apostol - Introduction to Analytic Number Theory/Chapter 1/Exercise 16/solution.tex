@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{graphicx, amsmath} % Required for inserting images
+
+\title{Apostol, Chapter 1 - Exercise 16}
+\author{Afonso Vilhena Francisco}
+\date{31 August 2026}
+
+\begin{document}
+
+\maketitle
+
+$\mathbf{16.}$ \textbf{Prove that if} $\mathbf{2^n-1}$ \textbf{is prime, then} $\mathbf{n}$ \textbf{is prime.}
+
+\vspace{0.5cm}
+
+Suppose the $n$ is composite, that is, $n=ab$, for some integers $a,b>1.$
+
+For any $j>1$, we have that $$x^j-1=(x-1)(x^{j-1}+x^{j-2}+...+x+1).$$
+
+Taking $x=2^a$ and $j=b$ we get
+
+\begin{align*}
+    2^n-1 = 2^{ab}-1 = (2^a-1)(2^{a(b-1)}+2^{a(b-2)}+...+2^a+1)
+\end{align*}
+
+Since $a>1$, we have that $2^a-1>1$ and $2^{a(b-1)}+2^{a(b-2)}+...+2^a+1$. Thus, $2^n-1$ is not a prime (Contradiction).
+
+Therefore, $n$ is prime.
+
+\end{document}
