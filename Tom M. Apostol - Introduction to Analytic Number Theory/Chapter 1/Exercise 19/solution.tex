@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{graphicx, amsfonts} % Required for inserting images
+
+\title{Apostol, Chapter - Exercise 19}
+\author{Afonso Vilhena Francisco}
+\date{09 September 2026}
+
+\begin{document}
+
+\maketitle
+
+$\mathbf{19.}$ \textbf{The Fibonacci sequence} $1,1,2,3,5,8,13,21,34,...$ \textbf{is defined by the recursion formula} $\mathbf{a_{n+1}=a_n+a_{n-1}},$ \textbf{with} $\mathbf{a_1=a_2=1.}$ \textbf{Prove that} $\mathbf{(a_n,a_{n+1})=1}$ \textbf{for each} $\mathbf{n}$.
+
+\vspace{0.5cm}
+Let $n \in \mathbb{N}$. If $n=1$, then $(a_{n+1},a_n)=(1,1)=1$.
+
+Now suppose $n \geq 2$. Obviously, $1|a_n$ and $1|a_{n+1}$.
+
+Now let $d$ be a common (positive) divisor of $a_n$ and $a_{n+1}.$ Since $a_{n-1}=a_{n+1}-a_n$, we have that $d|a_{n-1}$. Again, since $a_{n-2}=a_n-a_{n-1}$, we can conclude that $d|a_{n-2}$. Iterating this process we arrive at $d|a_2$. But $a_2=1$, so $d=1$. Therefore, $(a_n, a_{n+1})=1.$
+
+\end{document}
